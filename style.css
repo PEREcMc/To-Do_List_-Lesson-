@@ -1,0 +1,205 @@
+input, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    background-image: linear-gradient(
+  45deg,
+  hsl(135deg 81% 48%) 0%,
+  hsl(143deg 83% 49%) 9%,
+  hsl(150deg 85% 49%) 18%,
+  hsl(158deg 86% 49%) 27%,
+  hsl(166deg 88% 49%) 36%,
+  hsl(174deg 89% 49%) 45%,
+  hsl(181deg 91% 49%) 54%,
+  hsl(189deg 93% 50%) 63%,
+  hsl(197deg 95% 50%) 72%,
+  hsl(205deg 96% 50%) 81%,
+  hsl(212deg 98% 50%) 91%,
+  hsl(220deg 100% 50%) 100%
+);
+}
+h1 {
+    text-align: center;
+}
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.add-todo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    border-radius: 5px;
+    padding: 15px;
+    background-image: linear-gradient(
+        45deg,
+        hsl(56deg 81% 48%) 0%,
+        hsl(54deg 83% 49%) 9%,
+        hsl(51deg 85% 49%) 18%,
+        hsl(49deg 86% 49%) 27%,
+        hsl(47deg 88% 49%) 36%,
+        hsl(44deg 89% 49%) 45%,
+        hsl(42deg 91% 49%) 54%,
+        hsl(40deg 93% 50%) 63%,
+        hsl(37deg 95% 50%) 72%,
+        hsl(35deg 96% 50%) 81%,
+        hsl(32deg 98% 50%) 91%,
+        hsl(30deg 100% 50%) 100%
+      );
+}
+.input-wrapper {
+    width: 80%;
+    margin-right: 25px;
+}
+input {
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 5px;
+    color: rgba(36, 35, 35, 0.777);
+}
+button {
+    background: #fff;
+    font-size: 18px;
+    width: 100%;
+    color: rgb(248, 148, 17);
+    cursor: pointer;
+    position: relative;
+    padding: 4px 10px;
+    border-radius: 17px;
+}
+button:active {
+    top: 1.5px;
+}
+button:hover {
+    background: rgb(92, 228, 1);
+    border-radius: none;
+    color: #fff;
+} 
+.button-wrapper {
+    width: 20%;
+}
+.todos-wrapper {
+}
+
+.todo-item {
+    display: flex;
+    width: 500px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    background-image: linear-gradient(
+        45deg,
+        hsl(56deg 81% 48%) 0%,
+        hsl(54deg 83% 49%) 9%,
+        hsl(51deg 85% 49%) 18%,
+        hsl(49deg 86% 49%) 27%,
+        hsl(47deg 88% 49%) 36%,
+        hsl(44deg 89% 49%) 45%,
+        hsl(42deg 91% 49%) 54%,
+        hsl(40deg 93% 50%) 63%,
+        hsl(37deg 95% 50%) 72%,
+        hsl(35deg 96% 50%) 81%,
+        hsl(32deg 98% 50%) 91%,
+        hsl(30deg 100% 50%) 100%
+      );
+}
+.todo-item.checked {
+    background-image: linear-gradient(
+        45deg,
+        hsl(55deg 54% 9%) 0%,
+        hsl(53deg 55% 11%) 9%,
+        hsl(51deg 56% 13%) 18%,
+        hsl(49deg 57% 15%) 27%,
+        hsl(46deg 58% 17%) 36%,
+        hsl(44deg 59% 19%) 45%,
+        hsl(42deg 60% 20%) 54%,
+        hsl(39deg 61% 22%) 63%,
+        hsl(37deg 63% 24%) 72%,
+        hsl(35deg 64% 26%) 81%,
+        hsl(33deg 65% 27%) 91%,
+        hsl(30deg 66% 29%) 100%
+      );
+    opacity: 0.5;
+}
+.todo-item.deletion {
+    /* animation: opacity 1s ease-in-out; */
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+.description {
+    width: 80%;
+    color: #fff;
+    font-size: 20px;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    flex: 0 1 25%;
+    width: 20%;
+}
+.btn-complete {
+    display: block;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+.btn-delete {
+    background-color: crimson;
+    display: block;
+    color: cornsilk;
+}
+.btn-delete:hover {
+    font-style: inherit;
+    font-weight: 900;
+    background-color: cornsilk;
+    color: crimson;
+}
+/* @keyframes opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+} */
+@keyframes myAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
